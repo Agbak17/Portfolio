@@ -1,0 +1,223 @@
+:root {
+    --bg: #0f1724;
+    --card: #071025;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --glass: rgba(255, 255, 255, 0.3);
+    --max-width: 1100px;
+    --radius: 14px;
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg,#071826 0%, #071022 60%);
+    color: #e6eef6;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    padding: 36px 18px;
+    display: flex;
+    justify-content: center;
+}
+.wrap{
+    max-width: var(--max-width);
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+    gap: 12px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo {
+    height: 56px;
+    width: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent),#7c3aed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.logo span {
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+}
+.cta {
+    background: linear-gradient(90deg,var(--accent),#60a5fa);
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #042029;
+    font-weight: 700;
+    text-decoration: none;
+}
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 36px;
+}
+.intro h1 {
+    font-size: 40px;
+    margin: 0 0 8px;  
+}
+.intro p {
+    color: var(--muted);
+    margin: 0 0 18px;
+}
+.skills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.chip {
+    background: var(--glass);
+    padding: 8px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    color: var(--muted);
+}
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+    border-radius: var(--radius);
+    padding: 18px;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.avatar {
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#112233, #08202b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--muted);
+}
+.projects {
+    margin-top: 6px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+.project {
+    background: var(--card);
+    padding: 12px;
+    border-radius: 10px;    
+}
+.project img {
+    width: 100%;
+    height: 110px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.project h4 {
+    margin: 10px 0 6px;
+}
+.project p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+.links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.links a {
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+}
+footer {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+.socials {
+    display: flex;
+    gap: 12px;
+}
+.socials a {
+    color: var(--muted);
+    text-decoration: none;
+}
+#name, #location, #work-status, #get {
+    font-weight: 700;
+}
+#description, #city, #full-time, #contact {
+    color: var(--muted);
+    font-size: 13px;
+}
+#profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#work {
+    text-align: right;
+}
+h3 {
+    margin: 0 0 12px;
+}
+#about {
+    margin-top: 28px;
+}
+#about-me {
+    padding: 16px;
+}
+
+@media (max-width: 960px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 640px) {
+    body{
+        padding: 20px;
+    }
+    nav {
+        display: none;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    .logo {
+        height: 48px;
+        width: 48px;
+    }
+    .avatar {
+        height: 180px;
+    }
+}
